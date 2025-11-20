@@ -1,0 +1,143 @@
+body {
+  background-image: url("homeimg.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+}
+
+.navbar-container {
+  max-width: 800px;
+  margin: 40px auto 0 auto;
+  background: #fff;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 4px 24px rgba(74, 144, 226, 0.13);
+  margin-bottom: 20px;
+  position:sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.search {
+  margin-right: 0;
+  border-radius: 14px;
+  padding: 5px;
+}
+.btn {
+  margin-left: 0;
+  background-color: #4a90e2;
+  border-radius: 50%;
+}
+nav {
+  display: flex;
+  gap: 32px;
+  background: #263659;
+  padding: 16px 0;
+  border-radius: 12px 12px 0 0;
+  justify-content: center;
+}
+nav a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 18px;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: #4a90e2;
+  text-decoration: underline;
+}
+.content-container {
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  background: #fff;
+  border-radius: 0 0 12px 12px;
+  padding: 32px 40px;
+  box-shadow: 0 4px 24px rgba(74, 144, 226, 0.13);
+}
+h1, h2 {
+  color: #263659;
+  font-weight: 600;
+  margin-top: 0;
+  letter-spacing: 1px;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  border-bottom: 1px solid #ececec;
+  padding: 14px 0;
+}
+li:last-child {
+  border-bottom: none;
+}
+.movie {
+  margin-top: 10px;
+}
+.movie-link {
+  color: #4a90e2;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 500;
+}
+.movie-link:hover {
+  color: #1b356d;
+  text-decoration: underline;
+}
+.seats {
+  color: #777;
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+/* ------ Responsive for Mobile and Tablets ------- */
+@media (max-width: 800px) {
+  .navbar-container, .content-container {
+    max-width: 98vw !important;
+    margin: 12px auto 12px auto !important;
+    border-radius: 10px;
+    padding: 0 5vw;
+  }
+  nav {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+    padding: 12px 0;
+  }
+  .search, .btn {
+    width: 100%;
+    margin: 6px 0;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+  .btn {
+    border-radius: 8px;
+  }
+  .content-container {
+    padding: 8vw 3vw !important;
+  }
+  h2, h1 {
+    font-size: 6vw !important;
+  }
+}
+
+@media (max-width: 500px) {
+  nav a {
+    font-size: 15px;
+    padding: 10px 0;
+  }
+  .movies-list li {
+    font-size: 14px;
+    padding: 8px 0;
+  }
+  .movie-link {
+    font-size: 17px;
+  }
+  .content-container {
+    padding: 10px 4vw !important;
+  }
+}

@@ -1,0 +1,104 @@
+/* Auth.css - shared styles for Login/Register */
+
+/* Basic variables */
+:root {
+  --bg-color: #0f172a;
+  --card-bg: rgba(255, 255, 255, 0.06);
+  --accent: #6ee7b7;      /* mint accent */
+  --muted: #cbd5e1;
+  --input-bg: rgba(255,255,255,0.03);
+  --glass-blur: 8px;
+  --radius: 12px;
+  --max-width: 420px;
+}
+
+/* page background — uses an image from public/images/bg-auth.jpg,
+   fallback to gradient if image missing */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 36px;
+  background: linear-gradient(120deg, #071029 0%, #0b1530 100%);
+  /* if you have public/images/bg-auth.jpg, uncomment next line and comment gradient */
+  /* background: url('/images/bg-auth.jpg') center/cover no-repeat fixed; */
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* card */
+.auth-card {
+  width: 100%;
+  max-width: var(--max-width);
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+  backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+/* title */
+.auth-title {
+  margin: 0 0 18px 0;
+  color: white;
+  font-size: 1.5rem;
+  letter-spacing: 0.2px;
+  text-align: center;
+}
+
+/* labels & inputs */
+.auth-label {
+  display: block;
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 12px;
+  margin-bottom: 6px;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.05);
+  background: var(--input-bg);
+  color: white;
+  outline: none;
+  font-size: 0.95rem;
+  transition: box-shadow .15s, border-color .15s, transform .06s;
+}
+
+/* input focus */
+.auth-input:focus {
+  box-shadow: 0 4px 18px rgba(6, 182, 160, 0.08);
+  border-color: rgba(110,231,183,0.6);
+  transform: translateY(-1px);
+}
+
+/* button */
+.auth-button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 18px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  background: linear-gradient(90deg, #10b981, #06b6d4);
+  color: white;
+  box-shadow: 0 8px 20px rgba(6, 182, 160, 0.12);
+  transition: transform .12s, box-shadow .12s, opacity .12s;
+}
+
+.auth-button:hover { transform: translateY(-3px); }
+.auth-button:active { transform: translateY(-1px); }
+
+/* small screens */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 20px;
+    border-radius: 10px;
+  }
+  :root { --max-width: 360px; }
+}
